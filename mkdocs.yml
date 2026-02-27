@@ -1,0 +1,86 @@
+site_name: AI-Driven Zirconia Conductivity
+site_description: Physics-Informed Machine Learning for Zirconia Ionic Conductivity Optimization
+site_author: ""
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.tabs.link
+    - search.highlight
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            首页: Home
+            数据清洗: Data Cleaning
+            实验与结果: Experiments & Results
+            PIML 模型训练: PIML Model Training
+            机理深度解析: Mechanism Analysis
+            基准模型对比: Baseline Benchmarking
+            逆向材料设计: Inverse Material Design
+            主动学习与不确定性量化: Active Learning & UQ
+            稳定性筛选: Stability Screening
+            分子动力学验证: MD Validation
+            DFT 计算验证: DFT Verification
+            结果总览: Results Overview
+          site_name: AI-Driven Zirconia Conductivity
+
+nav:
+  - 首页: index.md
+  - 数据清洗: data-cleaning/index.md
+  - 实验与结果:
+      - PIML 模型训练: experiments/01-piml-training.md
+      - 机理深度解析: experiments/02-mechanism-analysis.md
+      - 基准模型对比: experiments/03-baseline-benchmark.md
+      - 逆向材料设计: experiments/04-inverse-design.md
+      - 主动学习与不确定性量化: experiments/05-active-learning.md
+      - 稳定性筛选: experiments/06-stability-screening.md
+      - 分子动力学验证: experiments/07-md-validation.md
+      - DFT 计算验证: experiments/08-dft-verification.md
+      - 结果总览: results/index.md
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
