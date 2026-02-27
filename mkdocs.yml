@@ -1,6 +1,7 @@
 site_name: AI-Driven Zirconia Conductivity
 site_description: Physics-Informed Machine Learning for Zirconia Ionic Conductivity Optimization
 site_author: ""
+site_url: !ENV [SITE_URL, ""]
 
 theme:
   name: material
